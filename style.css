@@ -27,6 +27,7 @@ header {
     cursor: pointer;
     border-radius: 5px;
     font-size: 17px;
+    color: black;
 }
 .intro button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -39,7 +40,7 @@ main {
 .homepage {
   display: flex;
   height: 80vh;
-  width: 100vw;
+  width: 99vw;
   background-color: rgb(81, 114, 245);
   overflow: hidden;
   margin-bottom: 2rem;
@@ -53,6 +54,7 @@ main {
   height: 100%;
   object-fit: cover;
   display: block;
+  margin-left: 0.5rem;
 }
 .intro {
   display: flex;
@@ -143,6 +145,7 @@ main {
     cursor: pointer;
     margin: 1rem auto;
     font-size: 15px;
+    color: black;
 }
 .images {
   display: flex; 
@@ -223,6 +226,12 @@ footer {
       left: 1rem;
       bottom: 2rem;
       padding: 1rem;
+  }
+  .homepage-image {
+    display: none;
+  }
+  .homepage {
+    height: auto;
   }
 }
 @media (orientation: landscape) and (min-width: 800px) {
