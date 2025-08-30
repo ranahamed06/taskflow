@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: auto;
+    color: rgb(69, 183, 221);
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    z-index: 100;
+}
+.intro button {
+    position: absolute;
+    left: 1rem;
+    bottom: 13rem;
+    padding: 1rem;
+    border: none;
+    background-color: rgb(69, 183, 221);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.intro button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+main {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+.homepage {
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+  background-color: rgb(81, 114, 245);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  color: white;
+}
+.homepage div {
+  flex: 1;
+}
+.homepage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.intro {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+.fade-in-text {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.5s; /* optional delay */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.features, .options, .reviews {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    gap: 1.5rem;
+    flex-wrap: wrap; 
+    padding: 0 1rem;
+}
+.features div, .options div, .reviews div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 1 / 1; 
+    flex: 1 1 250px;
+    max-width: 280px;
+}
+.features div p, .options div p, .reviews div p {
+    text-align: center;
+    padding: 0.5rem;
+}
+.item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+.item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.separator {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(38, 183, 231);
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 20px;
+}
+.user {
+  height: 3em;
+  width: 3em;
+  border-radius: 500px;
+  margin: auto;
+}
+
+.options div button {
+    width: auto;
+    padding: 0.5rem 1rem; 
+    background-color: rgb(69, 183, 221);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem auto;
+}
+.images {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.options div button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.editions {
+  width: 80%;
+  height: 80%;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: rgb(61, 10, 10);
+  cursor: pointer;
+  background-color: rgb(170, 233, 254);
+  transition: opacity 0.15s;
+}
+
+.info .branches:hover {
+  opacity: 0.6;
+}
+
+.info {
+  margin-left: 10px;
+}
+
+.fa {
+  font-size: 50px;
+  text-align: left;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.fa:hover {
+  opacity: 0.6;
+}
+
+.fa-instagram {
+  color: black;
+}
+.fa-facebook {
+  color: black;
+}
+.fa-twitter {
+  color: black;
+}
+@media (max-width: 755px) {
+  .homepage {
+    flex-direction: column;
+    min-width: 350px;
+  }
+  .homepage div {
+    flex: 1;
+  }
+  .homepage-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .intro {
+    min-height: 400px;
+  }
+  header button {
+      right: 1rem;
+      top: 2rem;
+      padding: 0.5rem;
+  }
+  .intro button {
+      left: 1rem;
+      bottom: 2rem;
+      padding: 1rem;
+  }
+}
+@media (orientation: landscape) and (min-width: 800px) {
+  .intro button {
+      left: 1rem;
+      bottom: 1rem;
+      padding: 1rem;
+  }
+}
